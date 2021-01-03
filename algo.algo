@@ -1,0 +1,34 @@
+Algorithm sentence_length
+    var 
+        l_length , number_of_words, number_of_vowels  : INTEGER = 0;
+        st : string
+
+
+Begin
+    read(st)
+
+// The length of the sentence
+FOR x FROM 0 TO l_length STEP step  DO
+    l_length := x++
+END_FOR
+
+// The number of words in the sentence
+WHILE ( st[i] <>'.' ) DO    
+      IF (st[i]=' ') THEN
+        number_of_words := number_of_words + 1; // "wordNb" is the number of words in the string S.
+      END_IF
+END_WHILE
+
+// The number of vowels in the sentence
+FOR k FROM 1 TO st[i] STEP step  DO
+    IF (qt[k]="a", qt[k]="e", qt[k]="i" qt[k]="o", qt[k]="u", qt[k]="y")
+    number_of_vowels:=number_of_vowels+1;
+    END_IF
+END_FOR
+
+write(l_length)
+write(number_of_words)
+write(number_of_vowels)
+
+END
+
