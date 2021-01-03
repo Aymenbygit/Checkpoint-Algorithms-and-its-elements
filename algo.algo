@@ -1,34 +1,23 @@
-Algorithm sentence_length
-    var 
-        l_length , number_of_words, number_of_vowels  : INTEGER = 0;
-        st : string
-
-
-Begin
-    read(st)
-
-// The length of the sentence
-FOR x FROM 0 TO l_length STEP step  DO
-    l_length := x++
-END_FOR
-
-// The number of words in the sentence
-WHILE ( st[i] <>'.' ) DO    
+ALGORITHM sentence_length
+VAR 
+   st : STRING;
+   i,number_of_vowels: INTEGER:=0;
+   number_of_words : INTEGER:=1;
+BEGIN 
+    Write("Enter a sentence ends with a point :");
+    Read(st);
+    WHILE ( st[i] <>'.' ) DO    
       IF (st[i]=' ') THEN
-        number_of_words := number_of_words + 1; // "wordNb" is the number of words in the string S.
+        number_of_words := number_of_words + 1;
       END_IF
-END_WHILE
+    
+      IF (st[i]='a' OR st[i]='e' OR st[i]='i' OR st[i]='o' OR st[i]='u') THEN
+        number_of_words := number_of_words +1; 
+      END_IF
+      i:=i+1;  
+    END_WHILE 
 
-// The number of vowels in the sentence
-FOR k FROM 1 TO st[i] STEP step  DO
-    IF (qt[k]="a", qt[k]="e", qt[k]="i" qt[k]="o", qt[k]="u", qt[k]="y")
-    number_of_vowels:=number_of_vowels+1;
-    END_IF
-END_FOR
-
-write(l_length)
-write(number_of_words)
-write(number_of_vowels)
-
+    Write("The number of charachters (Exept the point) in the sentence is : 'i' ");
+    Write("The number of words in the sentence is : 'wordNb' ");
+    Write("The number of vowels in the sentence is : 'vowelNb' ");
 END
-
